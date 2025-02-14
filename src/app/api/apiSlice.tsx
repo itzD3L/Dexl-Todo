@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { setCredentials, setSessionExpired } from '../../features/auth/authSlice';
 
 const baseQuery = fetchBaseQuery({
-    baseUrl: 'https://dexlTodo-api.onrender.com',
+    baseUrl: 'https://dexl-todo-api.onrender.com',
     credentials: 'include',
     prepareHeaders: (headers, { getState }) => {
         const token = (getState() as { auth: { token: string } }).auth.token;
