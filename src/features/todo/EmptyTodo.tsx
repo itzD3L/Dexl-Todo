@@ -1,5 +1,5 @@
 import emptyTodo from '../../assets/no-task.png'
-import styles from './Todo.module.css'
+import styles from './todo.module.css'
 import { useNavigate } from 'react-router'
 
 const EmptyTodo = () => {
