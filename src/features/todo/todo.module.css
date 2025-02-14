@@ -1,0 +1,287 @@
+.dashMainAddContainer {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 10px;
+}
+
+.dashMainAddContainer button {
+    font-weight: 700;
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+/* todo list */
+.todoTableContainer {
+    width: 100%;
+}
+
+.todoTableBody {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+/* todo */
+.todoContainer {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px var(--text);
+    padding: 0 8px;
+}
+
+.todoCheckbox {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.todoCheckbox input {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.todoTitle {
+    flex: 7;
+    cursor: pointer;
+}
+
+.todoTitle p {
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.todoActions {
+    display: flex;
+    justify-content: end;
+    gap: 0.5rem;
+}
+
+.todoActions button {
+    border: 1px solid var(--primary);
+    background-color: transparent;
+    padding: 5px 10px;
+    color: var(--text);
+    font-size: 1.3rem;
+}
+
+.todoActions button:active {
+    background-color: var(--primary);
+    color: var(--background);
+    
+}
+
+
+/* single todo */
+.singleTodoContainer {
+    min-height: calc(100vh - 140px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.singleTodoActionContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.singleTodoActionContainer_left {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.singleTodoActionContainer_left input {
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    cursor: pointer;
+    accent-color: var(--primary);
+}
+
+.singleTodoActions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.singleTodoActionContainer button {
+    border: 1px solid var(--primary);
+    background-color: transparent;
+    padding: 5px 10px;
+    color: var(--text);
+    font-size: 1.3rem;
+}
+
+.singleTodoActionContainer button:active {
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+.singleTodoTitleContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.singleTodoTitleContainer p {
+    font-size : 0.8rem;
+    margin: 0;
+    margin-left: 10px
+}
+
+.singleTodoTitleContainer div {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: 2px solid var(--text);
+    border-radius:  10px;
+    background-color: var(--background);
+    padding: 5px 7px;
+}
+
+.singleTodoTitleContainer div p {
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+
+
+.singleTodoDescriptionContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.singleTodoDescriptionContainer p {
+    font-size : 0.8rem;
+    margin: 0;
+    margin-left: 10px
+}
+
+.singleTodoDescriptionContainer div {
+    display: flex;
+    justify-content: start;
+    border: 2px solid var(--text);
+    border-radius:  10px;
+    background-color: var(--background);
+    padding: 5px 7px;
+
+    height: calc(100vh - 350px);
+    overflow-y: auto
+}
+
+.singleTodoDescriptionContainer div p {
+    word-break: break-all;
+        width: 100%;
+}
+
+.singleTodoStatusContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 75px;
+    
+}
+
+.singleTodoStatusContainer p {
+    flex: 1;
+    font-size: 0.7rem;
+}
+
+.singleTodoStatusContainer div {
+    flex: 1;
+}
+
+.singleTodoStatusContainer div p {
+    font-size: 0.7rem;
+}
+
+.statusCompleted {
+    color: green;
+    font-weight: 500;
+    font-size: 0.9rem
+}
+
+.statusOngoing {
+    color: red;
+    font-weight: 500;
+    font-size: 0.9rem
+}
+
+.dateSpan {
+    font-weight: 700;
+}
+
+/* title edit & create */
+
+.invalidInput {
+    border-color: red !important;
+}
+
+.titleInputContainer{
+    background-color: white !important;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.titleInputContainer input {
+    width: 100%;
+    height: 100%;
+    padding: 5px 7px;
+    border: none;
+}
+
+.titleInputContainer input:focus {
+    outline: none;
+}
+
+.descriptionInputContainer {
+    background-color: white !important;
+    padding: 0 !important;
+}
+
+.descriptionInputContainer textarea {
+    width: 100%;
+    height: 100%;
+    padding: 5px 7px;
+    border: none;
+    resize: none;
+    font-size: 0.9rem;
+}
+
+.descriptionInputContainer textarea:focus {
+    outline: none;
+}
+
+/* empty todo */
+.emptyTodoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emptyTodoContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.emptyTodoContent img {
+    width: 200px;
+    height: 200px;
+}
+
+.emptyTodoContent button {
+    padding: 5px 10px;
+    color: var(--text);
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-weight: 500;
+}
