@@ -14,7 +14,8 @@ import SingleTodo from './features/todo/SingleTodo'
 import NewTodo from './features/todo/NewTodo'
 import EditTodo from './features/todo/EditTodo'
 import VerifyEmail from './features/user/VerifyEmail'
-
+import AdminLayout from './features/admin/AdminLayout'
+import UserList from './features/admin/UserList'
 
 function App () {
 
@@ -44,8 +45,8 @@ function App () {
 
                                 {/* admin route */}
                                 <Route element={<RequiredAuth allowedRoles={[ROLES.Admin]}/>}>
-                                    <Route path='admin'>
-                                        
+                                    <Route path='admin' element={<AdminLayout />}>
+                                        <Route index element={<UserList />}/>
                                     </Route>
                                 </Route>
                             </Route>

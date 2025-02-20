@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { useSendLogoutMutation } from '../features/auth/authApiSlice';
 import { ClipLoader } from 'react-spinners';
+import { wsService } from '../app/services/wsService';
 
 const DashHeader = () => {
     const navigate = useNavigate();
@@ -26,9 +27,9 @@ const DashHeader = () => {
 
     const onLogoutClicked = async (e: React.FormEvent) =>  {
         e.preventDefault();
+        wsService.disconnect();
         const currentTabId = sessionStorage.getItem('currentTabId');
         const result = await sendLogout({ currentTabId }).unwrap();
-
         if(result) navigate('/');
     }
 

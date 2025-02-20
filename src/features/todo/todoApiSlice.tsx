@@ -1,4 +1,4 @@
-import { createSelector, createEntityAdapter } from "@reduxjs/toolkit";
+import { createEntityAdapter } from "@reduxjs/toolkit";
 import { apiSlice } from "../../app/api/apiSlice";
 
 const todoAdapter = createEntityAdapter({
@@ -93,20 +93,20 @@ export const {
     useDeleteTodoMutation
 } = todoApiSlice;
 
-// returns the query result object
-export const selectTodosResult = todoApiSlice.endpoints.getTodos.select({});
+// // returns the query result object
+// export const selectTodosResult = todoApiSlice.endpoints.getTodos.select({});
 
-// creates memorized selector
-const selectTodosData = createSelector(
-    selectTodosResult,
-    todosResult => todosResult.data 
-)
+// // creates memorized selector
+// const selectTodosData = createSelector(
+//     selectTodosResult,
+//     todosResult => todosResult.data 
+// )
 
 
-// getSelectors create  these selectors and we rename them with aliases using destructuring
-export const {
-    selectAll: selectAllTodos,
-    selectById: selectTodoById,
-    selectIds: selectTodoIds
-    // pass in selector that returns the state slice of state
-} = todoAdapter.getSelectors((state: any) => selectTodosData(state)) ?? initialState;
+// // getSelectors create  these selectors and we rename them with aliases using destructuring
+// export const {
+//     selectAll: selectAllTodos,
+//     selectById: selectTodoById,
+//     selectIds: selectTodoIds
+//     // pass in selector that returns the state slice of state
+// } = todoAdapter.getSelectors((state: any) => selectTodosData(state)) ?? initialState;

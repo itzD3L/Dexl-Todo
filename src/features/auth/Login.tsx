@@ -12,6 +12,7 @@ import { setCredentials } from './authSlice'
 const EMAIL_REGEX = /^[^@\s]+@[^@\s]+\.[^@\s]+$/
 const PASSWORD_REGEX = /^[A-Za-z0-9]{6,}$/
 
+
 const Login = () => {
     useTitle('Login');
 

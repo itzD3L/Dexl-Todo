@@ -1,8 +1,9 @@
-
+import { Outlet } from 'react-router'
 
 const AdminLayout = () => {
-    let content;
-    
+    const content = (
+        <Outlet/>
+    );
     return content
 }
 
